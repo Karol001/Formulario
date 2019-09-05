@@ -1,0 +1,12 @@
+{% load staticfiles %}
+{% block content %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'Formularios/main.css' %}">
+<div  class="container">
+    <form method='post'>
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="bubbly-button">Siguiente</button>
+    </form>
+</div>
+{% endblock %}

@@ -1,0 +1,32 @@
+{% load staticfiles %}
+{% block content %}
+<link rel="stylesheet" type="text/css" href="{% static 'Datos/datos.css' %}">
+<div  class="container">
+    <form method='post'>
+        <h1>Información</h1>
+        <br>
+        
+        {% csrf_token %}
+        <div class="datos">
+            <label class="label1" for="form.Nombre.name">{{form.Nombre.label}}</label>
+            {{form.Nombre}}
+        </div>
+
+        <div class="datos1">
+            <label class="label2" for="form.Cargoform.name">{{form.Cargoform.label}}</label>
+            {{form.Cargoform}}
+        </div>
+        <div class="datos2">
+            <label class="label3" for="form.area.name">{{form.area.label}}</label>
+            {{form.area}}
+        </div>
+
+        <div class="datos3">
+            <label class="label4" for="form.Correo.name">{{form.Correo.label}}</label>
+            {{form.Correo}}
+        </div>
+        <button type="submit" class="bubbly-button">Comenzar</button>
+    </form>
+    <br>
+</div>
+{% endblock %}
